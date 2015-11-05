@@ -31,12 +31,19 @@ Le dispositif mobile et son matériel fonctionnant sous Firefox OS.
 ## Architecture spécifique de Firefox OS
 ![specific_architecture](https://mdn.mozillademos.org/files/4605/FirefoxOS.png)
 
-TODO: À détailler.
-
 ## Architecture de Gecko
 ![security_framework](https://mdn.mozillademos.org/files/5027/securityframework.png)
 
-TODO: À détailler.
+* **Le framework de sécurité** contient:
+	* *Permission Manager*: Passerelle pour accéder aux fonctionnalités de l'API Web.
+	* *Access Control List*: Matrice des rôles et permissions requises pour accéder aux fonctionnalités de l'API Web.
+	* *Credential Validation*: Authentification des applications et des utilisateurs.
+	* *Permissions Store*: Ensemble des privilèges requis pour accéder aux fonctionnalités de l'API Web.
+* **Web API**: Ensemble d'APIs standards qui exposent les fonctionnalités matérielles au contenu web. Fournit des applications web avec accès sécurisé aux fonctions contenues dans l'appareil mobile, avec les données stockées sur - ou disponibles pour - l'appareil.
+* **I/O**: Interface to the hardware and data store(s).
+* Software Updates: Obtain and install updates to system software and third-party apps.
+* **Content Layout & Rendering**: Engine that parses, interprets, and executes web content and, with formatting information, displays the formatted content to the user.
+* **b2g process**: (Gecko) runs in a highly-privileged system process that has access to hardware features in the mobile phone. Running apps are child processes of b2g.
 
 ## Outils disponibles
 ### WebIDE
